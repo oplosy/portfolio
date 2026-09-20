@@ -1,0 +1,8 @@
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+.impeccable/review/
+npm-debug.log*
