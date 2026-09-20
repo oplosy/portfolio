@@ -22,7 +22,7 @@ Present a backend and infrastructure engineer through a memorable, technically c
 
 ## Positioning
 
-The portfolio explains complex backend systems through one persistent visual topology. A root node unfolds into services, data, queues, infrastructure, and projects rather than presenting work as disconnected cards or pages.
+The portfolio presents backend work as a precise editorial record. Large statements establish point of view; a horizontal project sequence lets each system occupy a complete chapter rather than compressing it into a card grid.
 
 ## Operating Context
 
@@ -30,23 +30,23 @@ The portfolio is evaluated on desktop and mobile web, often during a short recru
 
 ## Capabilities and Constraints
 
-- Scroll is the primary storytelling input and controls a reversible animation timeline.
-- The implemented journey covers Identity, System, About, Projects, Project Architecture, Technology Layers, Build Record, and Contact.
+- Scroll is the primary storytelling input and controls reversible hero, project-track, and ticker movement.
+- The implemented journey covers Identity, Position, Selected Work, Practice, Working Set, and Contact.
 - Semantic HTML, keyboard navigation, and readable content must remain available without animation.
 - Reduced-motion mode must show the same content in normal document flow.
-- The visual language must avoid matrix code, fake terminals, generic cyberpunk, generic glass cards, feature-card grids, badge clouds, and repeated fade-up sections.
+- The visual language must avoid matrix code, fake terminals, generic cyberpunk, glass cards, feature-card grids, gradients, badge clouds, and repeated fade-up sections.
 - No invented project metrics, testimonials, employers, or infrastructure claims.
 - The complete experience uses HTML, CSS, SVG, and GSAP primitives. Heavy 3D and generated assets remain out of scope.
 
-Project facts and repository destinations are sourced from the local repositories for Launchpad, ycollab, Fluxboard, and Table Tennis. The public identity remains `Contictus`; GitHub is the verified contact destination. No employment history, personal email, live-demo claim, or unverified metric is presented.
+Project facts and repository destinations are sourced from the local repositories for Launchpad, ycollab, Fluxboard, and Table Tennis. The public identity is `Oplosy`; `github.com/oplosy` is the contact destination. No employment history, personal email, live-demo claim, or unverified metric is presented.
 
 ## Brand Commitments
 
 - Backend, infrastructure, APIs, databases, networking, queues, distributed systems, and cloud infrastructure are the subject matter.
 - Voice is direct, technical, concrete, and professional.
-- The site should feel cinematic, high-quality, visually strong, and intentionally experimental.
-- Animation is part of navigation and explanation, not decoration.
-- The persistent metaphor is `NODE -> SYSTEM -> ARCHITECTURE -> PROJECT -> INFRASTRUCTURE`.
+- The site should feel editorial, technically credible, visually forceful, and intentionally direct.
+- Animation is part of navigation and reading order, not decoration.
+- The structural sequence is `POSITION -> SYSTEMS -> PRACTICE -> WORKING SET -> CONTACT`.
 
 ## Evidence on Hand
 
