@@ -1,226 +1,42 @@
 {
   "meta": {
-    "name": "Living Infrastructure",
-    "description": "A continuous scroll-driven developer portfolio where one root node unfolds into backend topology and project architecture.",
-    "source_references": [
-      "User-provided portfolio creative brief dated 2026-09-19"
-    ],
-    "created_at": "2026-09-19"
+    "name": "Operational Editorial",
+    "description": "A typographic backend-engineering portfolio organized as a scroll-driven editorial record.",
+    "updated_at": "2026-09-20"
   },
   "design_system": {
     "color": {
-      "palette_type": "split-complementary restrained industrial",
-      "primary": { "hex": "#0B0D0E", "role": "global canvas and deepest infrastructure plane" },
-      "secondary": { "hex": "#15191B", "role": "raised system surfaces and focused topology regions" },
-      "accent": { "hex": "#FF5A36", "role": "active request, selected node, focus indicator, and primary action" },
-      "neutral": {
-        "scale": ["#F3F5F1", "#E9ECE8", "#C7CDC8", "#9BA39E", "#626A66", "#353B38", "#15191B", "#0B0D0E"],
-        "usage": "Light values carry primary copy, middle values carry secondary copy and inactive topology, dark values define depth planes."
-      },
-      "semantic": {
-        "success": "#79B98A",
-        "warning": "#D8A84E",
-        "error": "#E56A61",
-        "info": "#7DA6C9"
-      },
-      "surface": {
-        "background": "#0B0D0E",
-        "card": "#111516",
-        "elevated": "#1A1F21"
-      },
-      "contrast_strategy": "High-contrast light ink on graphite with one signal-orange functional accent; no full-frame overlays or neon glow."
+      "paper": "#F0EEE7",
+      "ink": "#11110F",
+      "muted": "#68675F",
+      "signal": "#FF3B18",
+      "strategy": "Warm paper and near-black fields with one functional red signal. No gradients or decorative semantic colors."
     },
     "typography": {
-      "type_scale": {
-        "display": { "size": "clamp(4rem, 10vw, 10rem)", "weight": "600", "line_height": "0.94", "tracking": "-0.055em" },
-        "heading_1": { "size": "clamp(3rem, 7vw, 7rem)", "weight": "580", "line_height": "0.98", "tracking": "-0.045em" },
-        "heading_2": { "size": "clamp(2.25rem, 4.5vw, 4.75rem)", "weight": "560", "line_height": "1.02", "tracking": "-0.035em" },
-        "heading_3": { "size": "clamp(1.5rem, 2.4vw, 2.5rem)", "weight": "540", "line_height": "1.1", "tracking": "-0.02em" },
-        "body": { "size": "clamp(1rem, 1.25vw, 1.2rem)", "weight": "400", "line_height": "1.6", "tracking": "0em" },
-        "body_small": { "size": "0.9rem", "weight": "420", "line_height": "1.55", "tracking": "0.005em" },
-        "caption": { "size": "0.78rem", "weight": "500", "line_height": "1.4", "tracking": "0.02em" },
-        "overline": { "size": "0.72rem", "weight": "560", "line_height": "1.25", "tracking": "0.09em" }
-      },
-      "font_families": {
-        "heading": "Geist Sans",
-        "body": "Geist Sans",
-        "mono": "IBM Plex Mono"
-      },
-      "font_style_notes": "Geometric-humanist sans for confident clarity; mono is limited to technical labels and verified system data."
-    },
-    "spacing": {
-      "base_unit": "4px",
-      "scale": ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px", "128px"],
-      "content_density": "spacious around copy, dense inside the topology",
-      "section_rhythm": "One continuous world with calm opening, increasing system density, a stable reading interval, and a larger Projects peak."
+      "display": "Geist Sans",
+      "contrast": "Georgia italic",
+      "technical": "IBM Plex Mono",
+      "strategy": "Oversized tight sans statements, limited editorial italic interruption, mono only for evidence and indices."
     },
     "layout": {
-      "grid_system": "Asymmetric viewport composition over a fixed stage with semantic copy windows",
-      "max_content_width": "1600px for the visual stage; 62ch for prose",
-      "columns": "12-column alignment scaffold used invisibly, not as a repeated landing-page layout",
-      "gutter": "clamp(20px, 4vw, 72px)",
-      "breakpoints": ["640px", "768px", "1024px", "1280px", "1536px"],
-      "alignment_tendency": "Asymmetric with controlled radial topology moments"
-    },
-    "shape": {
-      "border_radius": { "small": "4px", "medium": "8px", "large": "16px", "pill": "999px only for compact controls" },
-      "border_usage": "Fine one-pixel structural lines for topology and focus, not card decoration",
-      "divider_style": "Topology paths and negative space replace generic section dividers"
-    },
-    "elevation": {
-      "shadow_style": "Tinted, offset, and restrained with edge-light support",
-      "levels": {
-        "low": "0 8px 24px rgba(2, 5, 6, 0.22)",
-        "medium": "0 24px 60px rgba(2, 5, 6, 0.34)",
-        "high": "0 48px 120px rgba(2, 5, 6, 0.46)"
-      },
-      "depth_cues": "Overlap, scale, contrast falloff, light blur, occlusion, and differential movement"
-    },
-    "iconography": {
-      "style": "Technical monoline where an icon is genuinely needed",
-      "stroke_weight": "1.5px",
-      "size_scale": ["16px", "20px", "24px"],
-      "preferred_set": "Phosphor Icons"
-    },
-    "motion": {
-      "easing": "Scroll-linked linear progress for scrubbed world motion; cubic-bezier(0.23, 1, 0.32, 1) for UI responses",
-      "duration_scale": { "micro": "100-180ms", "normal": "180-280ms", "macro": "controlled by scroll progress" },
-      "entrance_pattern": "Existing geometry reorganizes or reveals through masks; no repeated fade-up pattern",
-      "exit_pattern": "Geometry becomes the next state instead of fading to an empty frame",
-      "philosophy": "Cinematic but causal: motion communicates system structure, state, and navigation"
-    },
-    "components": {
-      "button_style": "Compact high-contrast text actions with directional underline and subtle press scale",
-      "input_style": "Dark structural surface, visible label, orange focus ring, no glass treatment",
-      "card_style": "No generic cards; project surfaces grow from topology nodes",
-      "navigation_pattern": "Compact waypoint map tied to the persistent request trace",
-      "modal_style": "No project modal; selected node morphs into the project surface",
-      "list_style": "Spatial system grouping and semantic layers instead of badge clouds or divided rows",
-      "component_notes": "All interactive states include hover, focus-visible, active, disabled, touch, and reduced-motion behavior."
+      "desktop": "Sticky hero, normal-flow manifesto, pinned horizontal project document, ticker interval, two-column stack, full-height contact.",
+      "mobile": "Fitted sticky hero followed by a complete vertical reading order.",
+      "gutter": "clamp(1.25rem, 3vw, 3.5rem)",
+      "shape": "Square fields and one-pixel rules; no card radius system."
     }
   },
   "design_style": {
-    "aesthetic": {
-      "mood": ["controlled", "architectural", "cinematic", "precise", "confident"],
-      "visual_metaphor": "A living backend system observed from root node to project architecture",
-      "era_influence": "Contemporary computational design with patent-drawing and infrastructure-map discipline",
-      "genre": "Awwwards experimental systems portfolio",
-      "personality_traits": ["analytical", "deliberate", "technically deep", "calm under complexity"],
-      "adjectives": ["spatial", "structural", "reversible", "industrial", "legible"]
-    },
-    "visual_language": {
-      "complexity": "rich",
-      "ornamentation": "restrained and functional",
-      "whitespace_usage": "Large quiet fields around concentrated topology",
-      "visual_weight_distribution": "A single root focus expands into distributed density, then reconverges",
-      "focal_strategy": "Progressive reveal with one project-transformation peak",
-      "contrast_level": "high",
-      "texture_usage": "Subtle fixed grain and controlled atmospheric depth only"
-    },
-    "composition": {
-      "hierarchy_method": "Scale, spatial isolation, connection density, and signal color",
-      "balance_type": "Asymmetric with temporary radial balance around the root node",
-      "flow_direction": "Depth-first, then distributed lateral topology, then focused project expansion",
-      "grouping_strategy": "Connection, proximity, and shared system boundary",
-      "negative_space_role": "Provides silence before dense transformations and preserves copy readability"
-    },
-    "imagery": {
-      "photo_treatment": "No photography in the first prototype; later assets must remain industrial and documentary rather than stock-tech",
-      "illustration_style": "Precise SVG topology and exploded technical-system drawing",
-      "graphic_elements": "Nodes, routes, boundary surfaces, request pulses, and coordinate anchors",
-      "pattern_usage": "No decorative repeating pattern; repetition only represents real system structure",
-      "image_shape": "Viewport-scale topology fields and expanding project surfaces"
-    },
-    "interaction_feel": {
-      "feedback_style": "Immediate and restrained",
-      "hover_behavior": "Local focus redirects connected routes and reduces unrelated system weight",
-      "transition_personality": "Smooth, physical, and reversible",
-      "loading_style": "Complete static opening composition before motion enhancement",
-      "microinteraction_density": "Low outside projects, moderate inside focus states"
-    },
-    "brand_voice_in_ui": {
-      "tone": "Direct, technical, and concrete",
-      "formality": "Professional without corporate filler",
-      "cta_style": "Short direct imperative",
-      "empty_state_approach": "Plain explanation with one available next action",
-      "error_tone": "Specific cause, impact, and recovery action"
-    }
+    "mood": ["editorial", "direct", "technical", "controlled", "independent"],
+    "focal_strategy": "Typographic scale and directional movement",
+    "ornamentation": "Minimal and functional",
+    "excluded_patterns": ["glass cards", "gradients", "skill pills", "fake terminals", "network decoration", "custom cursor", "stock imagery"]
   },
   "visual_effects": {
-    "overview": {
-      "effect_intensity": "heavy-immersive",
-      "performance_tier": "medium",
-      "fallback_strategy": "Static SVG composition and normal document flow with short opacity transitions",
-      "primary_technology": "GSAP ScrollTrigger plus SVG and CSS transforms"
-    },
-    "background_effects": {
-      "type": "subtle depth field",
-      "description": "Graphite depth planes with restrained grain and slow contrast shifts",
-      "technology": "CSS pseudo-elements",
-      "params": { "color_palette": ["#0B0D0E", "#15191B"], "speed": "slow", "density": "low", "opacity": "0.04-0.08", "blend_mode": "soft-light" }
-    },
-    "particle_systems": {
-      "enabled": false,
-      "type": "none",
-      "description": "Particles are intentionally excluded; nodes and routes carry meaning.",
-      "technology": "none",
-      "params": { "count": "0", "shape": "none", "size_range": "none", "movement_pattern": "none", "color_behavior": "none", "interaction": "none", "spawn_area": "none" }
-    },
-    "3d_elements": {
-      "enabled": false,
-      "type": "none in prototype",
-      "description": "Depth is produced through SVG planes, scale, blur, overlap, and perspective transforms.",
-      "technology": "CSS 3D transforms",
-      "params": { "renderer": "DOM/SVG", "lighting": "simulated edge light", "camera": "virtual 2.5D", "materials": "flat technical surfaces", "geometry": "SVG groups", "post_processing": ["subtle blur"], "interaction_model": "scroll and fine-pointer parallax" }
-    },
-    "shader_effects": {
-      "enabled": false,
-      "type": "none",
-      "description": "No shader is required for the prototype.",
-      "technology": "none",
-      "params": { "uniforms": "none", "vertex_manipulation": "none", "fragment_output": "none", "noise_type": "none", "distortion": "none" }
-    },
-    "scroll_effects": {
-      "parallax": { "enabled": true, "layers": "4", "depth_range": "8-80px", "speed_curve": "small differential rates with GSAP scrub" },
-      "scroll_triggered_animations": { "enabled": true, "trigger_points": "One normalized master track with labeled waypoints", "animation_type": "scale, route draw, clip reveal, topology rearrangement, copy-window reveal", "scrub_behavior": "Reversible 1:1 target progress with light smoothing" },
-      "scroll_morphing": { "enabled": true, "description": "Root node becomes topology, About surface, and project modules without clearing the stage." }
-    },
-    "text_effects": {
-      "type": "line mask, scale, and tracking transform",
-      "description": "Hero identity compresses as the system opens; short copy reveals by line.",
-      "technology": "GSAP plus overflow masks",
-      "params": { "split_strategy": "by-line with limited by-character use", "animation_per_unit": "transform and opacity", "stagger": "30-55ms", "effect_style": "controlled architectural assembly" }
-    },
-    "cursor_effects": {
-      "enabled": true,
-      "type": "context label and local magnetic response",
-      "description": "Native cursor remains; a small project-context label and fine-pointer depth response appear only in project zones.",
-      "params": { "shape": "native pointer plus compact text label", "size": "12-14px label", "blend_mode": "normal", "trail": "none", "interaction_zone": "project nodes and primary action only" }
-    },
-    "image_effects": {
-      "type": "none in prototype",
-      "description": "The prototype uses SVG primitives rather than raster imagery.",
-      "technology": "none",
-      "params": { "filter_pipeline": "none", "hover_transform": "none", "reveal_animation": "none", "distortion_type": "none" }
-    },
-    "glassmorphism_neumorphism": {
-      "enabled": false,
-      "style": "none",
-      "params": { "blur_radius": "0px", "transparency": "none", "border_treatment": "structural 1px lines only", "shadow_type": "tinted depth shadow", "light_source_angle": "top-left" }
-    },
-    "canvas_drawings": {
-      "enabled": false,
-      "type": "none",
-      "description": "SVG remains sufficient and more accessible for the prototype.",
-      "technology": "none",
-      "params": { "draw_method": "none", "animation_loop": "none", "color_scheme": "none", "responsiveness": "none", "interaction": "none" }
-    },
-    "svg_animations": {
-      "enabled": true,
-      "type": "topology draw and group morph",
-      "description": "Routes draw, nodes reorganize, boundaries expand, and the request trace travels through persistent geometry.",
-      "params": { "animation_method": "GSAP timelines", "path_morphing": "limited to compatible path pairs and group transforms", "stroke_animation": "stroke-dasharray and stroke-dashoffset", "filter_effects": "subtle local blur only" }
-    },
-    "composite_notes": "The experience uses one fixed SVG world and one semantic copy layer. Scroll controls a reversible master timeline. The peak is the topology-to-project transformation. Effects are reduced on mobile and replaced with normal-flow content under reduced motion."
+    "technology": "GSAP ScrollTrigger and CSS transforms",
+    "hero": "Three lines separate laterally under scrubbed vertical scroll.",
+    "projects": "A pinned five-screen horizontal track with content reveals inside the same timeline.",
+    "practice": "Two oversized discipline rows counter-scroll across a red field.",
+    "reduced_motion": "All scripted motion is removed while semantic content remains in normal flow.",
+    "performance": "Transform and opacity animation only; no WebGL, canvas, video, filters, or particle loop."
   }
 }
