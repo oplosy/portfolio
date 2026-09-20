@@ -6,7 +6,7 @@ import "@fontsource/ibm-plex-mono/600.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Contictus | Backend & Infrastructure Engineer",
+  title: "Oplosy | Backend & Infrastructure Engineer",
   description:
     "Backend and infrastructure engineering portfolio exploring systems, architecture, and selected work.",
 };
