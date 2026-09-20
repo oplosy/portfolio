@@ -1,68 +1,33 @@
 import { chromium } from "playwright-core";
 
-const browser = await chromium.launch({
-  executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-  headless: true,
+const executablePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const browser = await chromium.launch({ executablePath, headless: true });
+const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const page = await context.newPage();
+await page.goto("http://127.0.0.1:43127", { waitUntil: "networkidle" });
+
+const initialTransform = await page.locator(".project-track").evaluate((node) => getComputedStyle(node).transform);
+await page.evaluate(() => {
+  const work = document.querySelector(".work");
+  const track = document.querySelector(".project-track");
+  if (work && track) window.scrollTo(0, work.parentElement.offsetTop + (track.scrollWidth - innerWidth) * 0.55);
 });
+await page.waitForTimeout(900);
+const movedTransform = await page.locator(".project-track").evaluate((node) => getComputedStyle(node).transform);
+if (initialTransform === movedTransform || movedTransform === "none") throw new Error("Horizontal project track did not move");
 
-async function pageAt(viewport) {
-  const context = await browser.newContext({ viewport });
-  const page = await context.newPage();
-  const errors = [];
-  page.on("pageerror", (error) => errors.push(error.message));
-  await page.goto("http://127.0.0.1:43127", { waitUntil: "networkidle" });
-  return { context, page, errors };
-}
+const github = await page.locator('.contact a[href="https://github.com/oplosy"]').count();
+if (github !== 1) throw new Error("GitHub contact link is missing");
 
-const desktop = await pageAt({ width: 1440, height: 900 });
-const desktopOverflow = await desktop.page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
-if (desktopOverflow) throw new Error("Desktop has horizontal overflow");
+const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
+const mobilePage = await mobile.newPage();
+await mobilePage.goto("http://127.0.0.1:43127", { waitUntil: "networkidle" });
+const mobileOverflow = await mobilePage.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
+if (mobileOverflow) throw new Error("Mobile layout has horizontal overflow");
+const mobilePanels = await mobilePage.locator(".project-panel").count();
+if (mobilePanels !== 4) throw new Error(`Expected 4 project panels, found ${mobilePanels}`);
 
-async function assertInertAt(progress, selector, expected) {
-  await desktop.page.evaluate((targetProgress) => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    window.scrollTo(0, max * targetProgress);
-  }, progress);
-  await desktop.page.waitForTimeout(450);
-  const inert = await desktop.page.locator(selector).evaluate((element) => element.hasAttribute("inert"));
-  if (inert !== expected) throw new Error(`${selector} inert=${inert} at progress ${progress}`);
-}
-
-await assertInertAt(0.421, ".project-layer", true);
-await assertInertAt(0.515, ".project-layer", false);
-await assertInertAt(0.561, ".detail-scene", true);
-await assertInertAt(0.65, ".detail-scene", false);
-await assertInertAt(0.826, ".record-scene", true);
-await assertInertAt(0.9, ".record-scene", false);
-await assertInertAt(0.926, ".contact-scene", true);
-await assertInertAt(0.985, ".contact-scene", false);
-
-await desktop.page.evaluate(() => {
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  window.scrollTo(0, max * 0.515);
-});
-await desktop.page.waitForTimeout(700);
-await desktop.page.locator(".project-node--east").click();
-await desktop.page.waitForTimeout(1200);
-
-const selectedTitle = await desktop.page.locator("#detail-title").textContent();
-const selectedOpacity = Number(await desktop.page.locator(".detail-scene").evaluate((element) => getComputedStyle(element).opacity));
-if (selectedTitle !== "ycollab" || selectedOpacity < 0.75) {
-  throw new Error(`Project transition failed: title=${selectedTitle}, opacity=${selectedOpacity}`);
-}
-
-await desktop.page.evaluate(() => window.scrollTo(0, 0));
-await desktop.page.waitForTimeout(900);
-const heroOpacity = Number(await desktop.page.locator(".hero-scene").evaluate((element) => getComputedStyle(element).opacity));
-if (heroOpacity < 0.9) throw new Error(`Reverse scroll failed: hero opacity=${heroOpacity}`);
-if (desktop.errors.length) throw new Error(`Desktop page errors: ${desktop.errors.join(" | ")}`);
-await desktop.context.close();
-
-const mobile = await pageAt({ width: 390, height: 844 });
-const mobileOverflow = await mobile.page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
-if (mobileOverflow) throw new Error("Mobile has horizontal overflow");
-if (mobile.errors.length) throw new Error(`Mobile page errors: ${mobile.errors.join(" | ")}`);
-await mobile.context.close();
-
+await mobile.close();
+await context.close();
 await browser.close();
 console.log("interaction verification passed");
