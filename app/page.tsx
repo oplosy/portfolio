@@ -1,5 +1,5 @@
-import { SystemWorld } from "@/components/world/SystemWorld";
+import { Landing } from "@/components/landing/Landing";
 
 export default function Home() {
-  return <SystemWorld />;
+  return <Landing />;
 }
