@@ -22,7 +22,7 @@ Present a backend and infrastructure engineer through a memorable, technically c
 
 ## Positioning
 
-The portfolio presents backend work as a precise editorial record. Large statements establish point of view; a horizontal project sequence lets each system occupy a complete chapter rather than compressing it into a card grid.
+The portfolio presents backend work from inside a quiet control room. Large statements establish point of view, and an illustrative live topology shows the kind of system being built. The selected systems scroll beside a sticky request-path panel, so each project is read together with its real architecture instead of being compressed into a card grid.
 
 ## Operating Context
 
@@ -30,8 +30,8 @@ The portfolio is evaluated on desktop and mobile web, often during a short recru
 
 ## Capabilities and Constraints
 
-- Scroll is the primary storytelling input and controls reversible hero, project-track, and ticker movement.
-- The implemented journey covers Identity, Position, Selected Work, Practice, Working Set, and Contact.
+- Scroll is the primary storytelling input. It drives section reveals, the page progress bar, and which project the systems panel shows.
+- The implemented journey covers Identity, Approach, Selected Systems, Working Set, and Contact.
 - Semantic HTML, keyboard navigation, and readable content must remain available without animation.
 - Reduced-motion mode must show the same content in normal document flow.
 - The visual language must avoid matrix code, fake terminals, generic cyberpunk, glass cards, feature-card grids, gradients, badge clouds, and repeated fade-up sections.
@@ -44,9 +44,9 @@ Project facts and repository destinations are sourced from the local repositorie
 
 - Backend, infrastructure, APIs, databases, networking, queues, distributed systems, and cloud infrastructure are the subject matter.
 - Voice is direct, technical, concrete, and professional.
-- The site should feel editorial, technically credible, visually forceful, and intentionally direct.
-- Animation is part of navigation and reading order, not decoration.
-- The structural sequence is `POSITION -> SYSTEMS -> PRACTICE -> WORKING SET -> CONTACT`.
+- The site should feel calm, precise, technically credible, and intentionally direct.
+- Animation shows live traffic, the active state, and reading order. It is not decoration.
+- The structural sequence is `IDENTITY -> APPROACH -> SYSTEMS -> WORKING SET -> CONTACT`.
 
 ## Evidence on Hand
 

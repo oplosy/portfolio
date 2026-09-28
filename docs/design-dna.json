@@ -1,42 +1,45 @@
 {
   "meta": {
-    "name": "Operational Editorial",
-    "description": "A typographic backend-engineering portfolio organized as a scroll-driven editorial record.",
-    "updated_at": "2026-09-20"
+    "name": "Control Room",
+    "description": "A dark, signal-lit backend-engineering portfolio where real system architecture is the visual material.",
+    "updated_at": "2026-09-28"
   },
   "design_system": {
     "color": {
-      "paper": "#F0EEE7",
-      "ink": "#11110F",
-      "muted": "#68675F",
-      "signal": "#FF3B18",
-      "strategy": "Warm paper and near-black fields with one functional red signal. No gradients or decorative semantic colors."
+      "background": "#0E0F0F",
+      "raised": "#151717",
+      "ink": "#ECE8DF",
+      "ink_soft": "#C9C5BB",
+      "muted": "#8F8B82",
+      "signal": "#F2A43A",
+      "strategy": "Graphite field with bone-white ink and one amber status signal reserved for live, active, and emphasized states. No gradients or decorative semantic colors."
     },
     "typography": {
       "display": "Geist Sans",
-      "contrast": "Georgia italic",
-      "technical": "IBM Plex Mono",
-      "strategy": "Oversized tight sans statements, limited editorial italic interruption, mono only for evidence and indices."
+      "contrast": "Instrument Serif italic",
+      "technical": "Geist Mono",
+      "strategy": "Tight sentence-case sans statements, one serif-italic interruption per major heading, mono only for evidence and indices."
     },
     "layout": {
-      "desktop": "Sticky hero, normal-flow manifesto, pinned horizontal project document, ticker interval, two-column stack, full-height contact.",
-      "mobile": "Fitted sticky hero followed by a complete vertical reading order.",
-      "gutter": "clamp(1.25rem, 3vw, 3.5rem)",
-      "shape": "Square fields and one-pixel rules; no card radius system."
+      "desktop": "7/5 hero with topology figure, 3/9 section heads, three-column principles, scrolling project list beside a sticky request-path panel, full-width stack table, oversized contact.",
+      "mobile": "Single column; each project renders its own inline pipeline; no sticky panel.",
+      "gutter": "clamp(1.25rem, 4vw, 4rem)",
+      "max_width": "1440px",
+      "shape": "Square fields and one-pixel rules; no radius system."
     }
   },
   "design_style": {
-    "mood": ["editorial", "direct", "technical", "controlled", "independent"],
-    "focal_strategy": "Typographic scale and directional movement",
-    "ornamentation": "Minimal and functional",
-    "excluded_patterns": ["glass cards", "gradients", "skill pills", "fake terminals", "network decoration", "custom cursor", "stock imagery"]
+    "mood": ["calm", "precise", "technical", "nocturnal", "direct"],
+    "focal_strategy": "Typographic scale plus one live architectural figure",
+    "ornamentation": "Functional only: rules, indices, and signal traffic",
+    "excluded_patterns": ["glass cards", "gradients", "skill pills", "fake terminals", "matrix code", "custom cursor", "stock imagery", "invented metrics"]
   },
   "visual_effects": {
-    "technology": "GSAP ScrollTrigger and CSS transforms",
-    "hero": "Three lines separate laterally under scrubbed vertical scroll.",
-    "projects": "A pinned five-screen horizontal track with content reveals inside the same timeline.",
-    "practice": "Two oversized discipline rows counter-scroll across a red field.",
-    "reduced_motion": "All scripted motion is removed while semantic content remains in normal flow.",
-    "performance": "Transform and opacity animation only; no WebGL, canvas, video, filters, or particle loop."
+    "technology": "GSAP ScrollTrigger, SVG animateMotion, CSS transitions, IntersectionObserver",
+    "hero": "Statement lines rise from masks; topology edges draw in, and amber packets travel fixed routes through the illustrative system.",
+    "projects": "The active project is chosen by viewport middle band; the sticky panel crossfades to its architecture pipeline with a travelling packet and staggered nodes.",
+    "reveals": "Section headings lift in once; principle rules scale from the left; a top progress bar scrubs with the page.",
+    "reduced_motion": "Packets, pulses, and all scripted motion are removed while semantic content remains in normal flow.",
+    "performance": "Transform, opacity, and SVG motion paths only; no WebGL, canvas, video, or particle systems."
   }
 }

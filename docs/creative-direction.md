@@ -1,36 +1,38 @@
 # Portfolio Creative Direction
 
-## Operational Editorial
+## Control Room
 
-The site reads like an independent engineering journal: direct, oversized, sparse, and factual. It avoids the familiar developer-portfolio vocabulary of glowing dashboards, terminal windows, floating cards, skill pills, and decorative 3D objects.
+The site feels like the room where a production system is watched at night: dark, quiet, precise, with one amber lamp that tells you what is live. It avoids the developer-portfolio clichés of glowing terminals, matrix code, floating glass cards, skill pills, and decorative 3D.
 
-The central idea is not “look at a simulated backend.” It is “read the judgment behind four real systems.”
+The central idea is not "look at a simulated backend." It is "see the shape of the systems this engineer builds, then read the four real ones."
 
 ## Visual grammar
 
-- Warm paper and near-black fields create the main rhythm.
-- Signal red marks emphasis, sequence, and movement.
-- Geist Sans provides blunt display scale.
-- Georgia italic interrupts the sans typography at decisive phrases.
-- IBM Plex Mono is evidence: indices, architecture steps, time, and location.
-- One-pixel rules organize information instead of containers or shadows.
+- A graphite field and bone-white ink carry the whole page.
+- Signal amber marks what is live or active: traffic, the current project, progress, focus.
+- Geist Sans provides calm, tight display scale in sentence case.
+- Instrument Serif italic interrupts each major statement at its decisive word.
+- Geist Mono is evidence: indices, architecture order, stacks, time, and location.
+- One-pixel rules organize information. The only raised surface is the systems panel.
 
 ## Scroll grammar
 
-The opening remains pinned while its three lines move at different rates. The motion deliberately breaks the initial statement without reducing contrast.
+The opening statement rises out of line masks while the Fig. 01 topology draws its edges and begins carrying traffic. The topology is honest about being illustrative. It is assembled from parts the four projects actually use.
 
-Selected Work is a true horizontal document. Vertical input advances a five-screen track: an introduction followed by Launchpad, ycollab, Fluxboard, and Table Tennis. Each project exposes its architecture as an ordered list and links to its verified repository.
+Approach is the quiet interval: three principles opened by amber-led rules.
 
-The red Practice interval releases the pinned tension with two counter-moving lines. Working Set and Contact then return to ordinary document flow.
+Selected Systems is the peak. Four project articles scroll past a sticky request-path panel. Whichever project sits in the middle of the viewport becomes fully lit, and the panel switches to its architecture, with a packet travelling the path from first node to last.
+
+Working Set and Contact then return to plain document flow and end on a single question and a single link.
 
 ## Mobile
 
-Mobile is a separate composition. Hero typography fits completely and moves over a shorter range. The project sequence becomes vertical, preserving every description, architecture step, engineering note, and repository link. No horizontal gesture is required.
+Mobile is its own composition. The hero statement fits within the viewport, the topology follows the actions, and each project carries its own inline pipeline instead of a sticky panel. No horizontal gesture is required anywhere.
 
 ## Motion boundaries
 
-- Scroll-linked motion uses transforms and opacity only.
+- Motion uses transforms, opacity, and SVG motion paths only.
 - Content never depends on an animation completing.
-- Reduced-motion users receive the complete normal-flow document.
+- Continuous loops are limited to meaningful traffic: topology packets, the pipeline packet, the core-node pulse, and the status dot.
+- Reduced-motion users receive the complete, static, normal-flow document.
 - The native cursor remains unchanged.
-- No autoplay media, decorative particles, or continuous animation loops are used.
